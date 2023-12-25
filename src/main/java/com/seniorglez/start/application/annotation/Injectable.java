@@ -1,4 +1,4 @@
-package com.seniorglez.start.application;
+package com.seniorglez.start.application.annotation;
 
 
 import java.lang.annotation.ElementType;
