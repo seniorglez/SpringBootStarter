@@ -1,5 +1,6 @@
 package com.seniorglez.start.infra.entity;
 
+import com.seniorglez.start.domain.model.User;
 import jakarta.persistence.*;
 
 @Entity
@@ -88,5 +89,16 @@ public class UserEntity extends BaseEntity {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    public User toModel() {
+        return new User(
+                username,
+                email,
+                passwordHash,
+                firstName,
+                lastName,
+                telephone
+        );
     }
 }
